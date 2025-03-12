@@ -1,5 +1,7 @@
 package uce.edu.ec.service;
 
+import java.util.List;
+
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import uce.edu.ec.repository.IPropiedadRepo;
@@ -15,5 +17,12 @@ public class PropiedadServImpl implements IPropiedadServ {
     public void insertar(Propiedad propiedad) {
         this.propiedadRepo.insertar(propiedad);
     }
+
+    @Override
+    public List<Propiedad> buscartodo() {
+        return this.propiedadRepo.buscartodo();
+         
+    }
+    
     
 }
